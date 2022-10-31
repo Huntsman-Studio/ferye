@@ -4,6 +4,7 @@ import { FooterComponent } from './footer.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { SocialComponent } from './social/social.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,9 @@ import { SocialComponent } from './social/social.component';
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     FooterComponent,
