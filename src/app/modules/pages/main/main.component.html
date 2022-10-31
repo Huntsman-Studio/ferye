@@ -1,1 +1,35 @@
-<p>main works!</p>
+<section class="bg-ice px-7">
+
+    <div>
+
+        <div class="grid">
+
+            <!-- content -->
+            <div class="text-left space-y-6">
+                <h1 class="tetx-black font-bold text-3xl">Ferye, the love of style</h1>
+                <p class="text-black text-sm">Jewelry is like the perfect spice – it always complements what’s already there.</p>
+                <button
+                    type="button"
+                    [routerLink]="['shop']"
+                    class="bg-black rounded-full w-60 h-16 text-white text-sm font-bold hover:bg-pine focus:bg-clover cursor-pointer">
+                    Ανακάλυψε την συλλογή
+                </button>
+            </div>
+
+            <!-- images -->
+            <div class="mt-8 pb-16">
+                <div class="flex justify-center items-center">
+                    <img class="w-48 h-auto rounded-3xl" src="assets/images/main/image1.jpeg" alt="Image 1" lazyload/>
+                    <img class="w-48 h-auto rounded-3xl mt-20 -ml-20"src="assets/images/main/image2.jpeg" alt="Image 2" lazyload/>
+                </div>
+
+                <div class="flex justify-center">
+                    <img class="w-64 h-auto rounded-3xl -mt-20" src="assets/images/main/horizontal.jpeg" alt="Image 3" lazyload/>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

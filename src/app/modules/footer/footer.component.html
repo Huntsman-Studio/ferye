@@ -1,1 +1,55 @@
-<p>footer works!</p>
+<section class="bg-[#F5F5F5] px-6 pt-10 pb-6">
+
+    <div>
+
+        <!-- items -->
+        <div class="grid w-full">
+            
+            <!-- company -->
+            <div class="pl-7">
+                <ul class="space-y-6 text-[#6D6D6D] font-normal text-lg cursor-pointer">
+                    <li class="text-[#282828] cursor-default font-bold text-xl">Εταιρεία</li>
+                    <li class="hover:text-[#007377]">Ο Κόσμος του Ferye</li>
+                    <li [routerLink]="['contact']" class="hover:text-[#007377]">Επικοινωνία</li>
+                    <li class="hover:text-[#007377]">Προστασία προϊόντων</li>
+                    <li class="hover:text-[#007377]">Εύρεση παραγγελίας</li>
+                </ul>
+            </div>
+
+            <!-- useful -->
+            <div class="mt-12 pl-7">
+                <ul class="space-y-6 md:pt-0 text-[#6D6D6D] font-normal text-lg cursor-pointer">
+                    <li class="text-[#282828] cursor-default font-bold text-xl">Πληροφορίες</li>
+                    <li class="hover:text-[#007377]">Όροι χρήσης</li>
+                    <li class="hover:text-[#007377]">Πολιτική απορρήτου</li>
+                    <li class="hover:text-[#007377]">Πληρωμές και αποστολές</li>
+                    <li class="hover:text-[#007377]">Επιστροφές και ακυρώσεις</li>
+                </ul>
+            </div>
+
+            <!-- newsletter -->
+            <div class="pt-16">
+                <div class="space-y-6">
+                    <h2 class="text-[#282828] font-bold text-xl">Κράτα επαφή με τη Ferye</h2>
+                    <p class="text-black font-normal text-sm">Κανε εγγραφή με το email σου και μείνε ενημερωμένος σχετικα με το κόσμο της ferye, μάθε πρώτος για αποκλειστικές προσφορές, νεα σχέδια και πολλά ακόμη...</p>
+                </div>
+                <app-newsletter></app-newsletter>
+            </div>
+
+            <!-- social -->
+            <div>
+                <app-social></app-social>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- copyrights -->
+    <div class="w-full pt-6">
+        <p class="text-[#B1B1B1] text-xs font-normal text-center">
+            Πνευματική ιδιοκτησία © {{ anio }} <span class="font-bold">Ferye LTD</span>. Με επιφύλαξη κάθε νόμιμου διακαιώματος.
+        </p>
+    </div>
+
+</section>
