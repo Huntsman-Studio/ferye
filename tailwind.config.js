@@ -29,10 +29,13 @@ module.exports = {
         "coconut": '#FAFAFA'
       }
     },
+    screens: {
+      '3xl': '1920px'
+    }
   },
   plugins: [
     //require('@tailwindcss/forms'),
     //require('@tailwindcss/typography'),
-    require('flowbite/plugin')
+    // require('flowbite/plugin')
   ],
 }
