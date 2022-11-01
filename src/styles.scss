@@ -8,3 +8,16 @@
         font-family: 'Manrope';
     }
 }
+
+// error-icon
+svg.error-icon {
+    .a,.b{fill:none;}.b{stroke:#ef3f4c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}
+}
+
+div{
+  .max-width-de {
+    @media (min-width: 1536px) {
+      max-width: 1920px !important;
+    }
+  }
+}
