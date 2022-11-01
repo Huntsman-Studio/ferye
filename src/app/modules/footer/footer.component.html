@@ -1,37 +1,37 @@
-<section class="bg-[#F5F5F5] px-6 pt-10 pb-6">
+<section class="bg-[#F5F5F5] px-6 pt-10 pb-6 lg:pt-16">
 
     <div class="max-width-de">
 
         <!-- items -->
-        <div class="grid w-full">
+        <div class="grid w-full lg:flex lg:justify-center lg:gap-10 2xl:gap-36">
             
             <!-- company -->
             <div class="pl-7 lg:pl-0">
                 <ul class="space-y-6 text-[#6D6D6D] font-normal text-lg cursor-pointer">
-                    <li class="text-[#282828] cursor-default font-bold text-xl">Εταιρεία</li>
-                    <li class="hover:text-[#007377]">Ο Κόσμος του Ferye</li>
-                    <li [routerLink]="['contact']" class="hover:text-[#007377]">Επικοινωνία</li>
-                    <li class="hover:text-[#007377]">Προστασία προϊόντων</li>
-                    <li class="hover:text-[#007377]">Εύρεση παραγγελίας</li>
+                    <li class="text-[#282828] cursor-default font-bold text-xl lg:text-[22px]">Εταιρεία</li>
+                    <li class="hover:text-[#007377]  text-lg lg:text-xl">Ο Κόσμος του Ferye</li>
+                    <li [routerLink]="['contact']" class="hover:text-[#007377]  text-lg lg:text-xl">Επικοινωνία</li>
+                    <li class="hover:text-[#007377] text-lg lg:text-xl">Προστασία προϊόντων</li>
+                    <li class="hover:text-[#007377] text-lg lg:text-xl">Εύρεση παραγγελίας</li>
                 </ul>
             </div>
 
             <!-- useful -->
-            <div class="mt-12 pl-7">
+            <div class="mt-12 pl-7 lg:mt-0 lg:pl-0">
                 <ul class="space-y-6 md:pt-0 text-[#6D6D6D] font-normal text-lg cursor-pointer">
-                    <li class="text-[#282828] cursor-default font-bold text-xl">Πληροφορίες</li>
-                    <li class="hover:text-[#007377]">Όροι χρήσης</li>
-                    <li class="hover:text-[#007377]">Πολιτική απορρήτου</li>
-                    <li class="hover:text-[#007377]">Πληρωμές και αποστολές</li>
-                    <li class="hover:text-[#007377]">Επιστροφές και ακυρώσεις</li>
+                    <li class="text-[#282828] cursor-default font-bold text-xl lg:text-[22px]">Πληροφορίες</li>
+                    <li class="hover:text-[#007377] text-lg lg:text-xl">Όροι χρήσης</li>
+                    <li class="hover:text-[#007377] text-lg lg:text-xl">Πολιτική απορρήτου</li>
+                    <li class="hover:text-[#007377] text-lg lg:text-xl">Πληρωμές και αποστολές</li>
+                    <li class="hover:text-[#007377] text-lg lg:text-xl">Επιστροφές και ακυρώσεις</li>
                 </ul>
             </div>
 
             <!-- newsletter -->
-            <div class="pt-16">
-                <div class="space-y-6">
-                    <h2 class="text-[#282828] font-bold text-xl">Κράτα επαφή με τη Ferye</h2>
-                    <p class="text-black font-normal text-sm">Κανε εγγραφή με το email σου και μείνε ενημερωμένος σχετικα με το κόσμο της ferye, μάθε πρώτος για αποκλειστικές προσφορές, νεα σχέδια και πολλά ακόμη...</p>
+            <div class="mt-16 lg:mt-0">
+                <div class="space-y-6 lg:max-w-md xl:max-w-lg">
+                    <h2 class="text-[#282828] font-bold text-xl lg:text-[22px]">Κράτα επαφή με τη Ferye</h2>
+                    <p class="text-black font-normal text-sm lg:text-base">Κανε εγγραφή με το email σου και μείνε ενημερωμένος σχετικα με το κόσμο της ferye, μάθε πρώτος για αποκλειστικές προσφορές, νεα σχέδια και πολλά ακόμη...</p>
                 </div>
                 <app-newsletter></app-newsletter>
             </div>
@@ -46,7 +46,7 @@
     </div>
 
     <!-- copyrights -->
-    <div class="w-full pt-6">
+    <div class="w-full pt-6 lg:pt-10">
         <p class="text-[#B1B1B1] text-xs font-normal text-center">
             Πνευματική ιδιοκτησία © {{ anio }} <span class="font-bold">Ferye LTD</span>. Με επιφύλαξη κάθε νόμιμου διακαιώματος.
         </p>

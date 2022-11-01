@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { NewsletterService } from 'src/app/core/services/newsletter.service';
 
 @Component({
   selector: 'app-newsletter',
@@ -12,7 +11,7 @@ export class NewsletterComponent implements OnInit {
 
   newsletterForm: FormGroup
 
-  constructor(private newsletterService: NewsletterService) {
+  constructor() {
     this.newsletterForm = this.getnerateNewsletter();
   }
 
@@ -30,12 +29,6 @@ export class NewsletterComponent implements OnInit {
   submitNewsletter(form: FormGroup) {
 
     console.log(form.value.email)
-
-    if(form.valid) {
-      this.newsletterService.addToList(form.value.email).subscribe( res => {
-        console.log(res)
-      });
-    }
   }
 
 }
