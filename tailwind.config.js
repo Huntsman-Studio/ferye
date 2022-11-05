@@ -29,9 +29,9 @@ module.exports = {
         "coconut": '#FAFAFA'
       }
     },
-    screens: {
-      '3xl': '1920px'
-    }
+    // screens: {
+    //   '3xl': '1920px'
+    // }
   },
   plugins: [
     //require('@tailwindcss/forms'),

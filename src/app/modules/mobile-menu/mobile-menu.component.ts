@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalDataService } from 'src/app/core/services/global-data.service';
 
 @Component({
   selector: 'app-mobile-menu',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MobileMenuComponent implements OnInit {
 
-  constructor() { }
+  public menu: boolean | undefined;
+
+  constructor(private globalDataService: GlobalDataService) { }
 
   ngOnInit(): void {
+    //menu
+    this.globalDataService.menu.subscribe( val => (
+      this.menu = val
+    ));
   }
 
+  // closeMenu
+  closeMenu() {
+    this.globalDataService.showHideMenu(false);
+  }
 }
