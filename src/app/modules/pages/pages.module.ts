@@ -7,6 +7,7 @@ import { OurWorldComponent } from './our-world/our-world.component';
 import { ProductsProtectionComponent } from './products-protection/products-protection.component';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { IconsModule } from 'src/app/shared/icons/icons.module';
 
 
 
@@ -22,7 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     PagesRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    IconsModule
   ]
 })
 export class PagesModule { }

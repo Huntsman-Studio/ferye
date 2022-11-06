@@ -1,30 +1,31 @@
-<section class="bg-[#E0F6F3] px-7">
+<section class="bg-[#E0F6F3] px-7 sm:pt-5 lg:px-16 3xl:flex 3xl:justify-center 3xl:items-center">
 
-    <div class="">
+    <div class="3xl:max-w-[1920px]">
 
-        <div class="grid justify-center items-center">
+        <div class="grid w-full xl:flex xl:justify-between 2xl:justify-center xl:items-center 3xl:gap-28">
 
             <!-- content -->
-            <div class="text-left space-y-6">
-                <h1 class="tetx-black font-bold text-3xl">Ferye, the love of style</h1>
-                <p class="text-black text-sm">Jewelry is like the perfect spice – it always complements what’s already there.</p>
+            <div class="text-left space-y-6 md:space-y-9 xl:-mt-56 overflow-visible">
+                <h1 class="tetx-black font-bold text-[32px] sm:text-[42px] md:text-[64px] 2xl:text-[76px] 3xl:text-[90px] max-w-[356px] sm:max-w-[428px] xl:max-w-[460px] 2xl:max-w-[720px] 3xl:max-w-[720px]">Ferye, the love of style</h1>
+                <p class="text-black text-sm sm:text-lg md:text-xl 2xl:text-[22px] 3xl:text-[25px] max-w-[310px] sm:max-w-[356px] md:max-w-[426px] 3xl:max-w-[520px]">Κλέψτε τις εντυπώσεις σκορπίζοντας λάμψη σε κάθε σας εμφάνιση</p>
                 <button
                     type="button"
                     [routerLink]="['shop']"
-                    class="bg-black rounded-full w-60 h-16 text-white text-sm font-bold hover:bg-[#007377] focus:bg-[#004F4F] cursor-pointer">
+                    class="bg-black rounded-full w-80 sm:w-72 md:w-80 h-16 text-white text-sm sm:text-lg md:text-xl font-bold hover:bg-[#007377] focus:bg-[#004F4F] cursor-pointer">
                     Ανακάλυψε την συλλογή
                 </button>
             </div>
 
             <!-- images -->
-            <div class="mt-8 pb-16">
+            <div class="mt-8 sm:mt-10 md:mt-12 pb-16 sm:pb-24 md:pb-32 z-10 overflow-visible">
                 <div class="flex justify-center items-center">
-                    <img class="w-48  h-auto rounded-3xl" src="assets/images/main/image1.jpeg" alt="Image 1" lazyload/>
-                    <img class="w-48  h-auto rounded-3xl mt-20 -ml-20"src="assets/images/main/image2.jpeg" alt="Image 2" lazyload/>
+                    <img class="w-48 sm:w-72 md:w-80 2xl:w-[407px] h-auto rounded-3xl" src="assets/images/main/image1.jpeg" alt="Image 1" lazyload/>
+                    <img class="w-48 sm:w-72 md:w-80 lg:hidden h-auto rounded-3xl mt-20 -ml-20"src="assets/images/main/image2.jpeg" alt="Image 2" lazyload/>
                 </div>
 
-                <div class="flex justify-center">
-                    <img class="w-64 h-auto rounded-3xl -mt-20" src="assets/images/main/horizontal.jpeg" alt="Image 3" lazyload/>
+                <div class="flex justify-center items-center lg:gap-4 2xl:gap-10 2xl:-ml-40 3xl:-mt-20 3xl:-mr-40">
+                    <img class="w-64 sm:w-96 md:w-[486px] lg:w-[413px] 2xl:w-[533px] 2xl:h-auto h-auto lg:h-[277px] rounded-3xl -mt-20 lg:-mt-56" src="assets/images/main/horizontal.jpeg" alt="Image 3" lazyload/>
+                    <img class="hidden lg:block w-80 2xl:w-[407px] h-auto rounded-3xl mt-20 lg:-mt-72 -ml-20 lg:ml-0" src="assets/images/main/image2.jpeg" alt="Image2" lazyload/>
                 </div>
             </div>
 
