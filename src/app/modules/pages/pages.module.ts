@@ -5,6 +5,8 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { ContactComponent } from './contact/contact.component';
 import { OurWorldComponent } from './our-world/our-world.component';
 import { ProductsProtectionComponent } from './products-protection/products-protection.component';
+import { ContactFormComponent } from './contact/contact-form/contact-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -13,11 +15,14 @@ import { ProductsProtectionComponent } from './products-protection/products-prot
     MainComponent,
     ContactComponent,
     OurWorldComponent,
-    ProductsProtectionComponent
+    ProductsProtectionComponent,
+    ContactFormComponent
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class PagesModule { }

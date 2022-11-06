@@ -1,0 +1,56 @@
+<div class="grid">
+
+    <div class="space-y-5">
+        <h3 class="text-[#7D8F9E] text-xl font-bold">Επικοινωνήστε μαζί μας</h3>
+        <p class="text-[#7D8F9E] text-sm font-normal">Μην διστάσετε να επικοινωνήσετε μαζί μας για οποιαδήποτε απορία η πρόβλημα αντιμετωπίζετε.</p>
+    </div>
+
+    <form [formGroup]="contactForm" (ngSubmit)="submitForm(contactForm)">
+
+        <div class="grid gap-4 pt-7">
+
+            <!-- Name -->
+            <div class="relative">
+                <!-- input -->
+                <input 
+                    type="text"
+                    id="name"
+                    formControlName="name"
+                    [ngClass]="[contactForm.controls['name'].invalid && (contactForm.controls['name'].touched || contactForm.controls['name'].dirty) ? 'border-2 border-[#EF3F4C] focus:border-[#EF3F4C]' : 'border-2 border-transparent focus:border-[#007377]']"
+                    class="block rounded-xl px-2.5 pb-2.5 pt-5 w-full text-sm text-[#282828] bg-[#C1DCF6]  appearance-none dark:focus:border-[#007377] focus:outline-none focus:ring-0  peer h-16 pl-4 focus:bg-white font-bold"
+                    placeholder=" "
+                />
+                <!-- label -->
+                <label
+                    for="name"
+                    [ngClass]="[contactForm.controls['name'].invalid && (contactForm.controls['name'].touched || contactForm.controls['name'].dirty) ? 'text-[#EF3F4C] peer-focus:text-[#EF3F4C]' : 'text-[#282828] peer-focus:text-[#007377]']"
+                    class="absolute text-sm duration-300 transform -translate-y-4 scale-100 top-6 z-10 origin-[0] left-4  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4"
+                >
+                    Όνομα
+                </label>
+                <!-- Valid value-->
+                <p
+                    *ngIf="((!contactForm.controls['name'].dirty && contactForm.controls['name'].touched) && contactForm.controls['name'].valid)"
+                    class="absolute duration-300 transform -translate-y-4 scale-100 top-10 z-10 origin-[0] right-5"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a,.b{fill:none;}.b{stroke:#007377;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><path class="a" d="M0,0H24V24H0Z"/><path class="b" d="M5,12l5,5L20,7"/></svg>
+                </p>
+                <!-- !Valid value -->
+                <p
+                    *ngIf="contactForm.controls['name'].invalid && (contactForm.controls['name'].touched || contactForm.controls['name'].dirty)"
+                    class="absolute duration-300 transform -translate-y-4 scale-100 top-10 z-10 origin-[0] right-5"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a,.b{fill:none;}.b{stroke:#ef3f4c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><g transform="translate(0)"><path class="a" d="M0,0H24V24H0Z" transform="translate(0)"/><path class="b" d="M12,9v2.011m0,4.022v.01" transform="translate(0 -0.017)"/><path class="b" d="M5,19.088H18.971a1.993,1.993,0,0,0,1.645-.893,2.024,2.024,0,0,0,.191-1.872L13.72,4.006a1.989,1.989,0,0,0-3.494,0L3.14,16.323a2.024,2.024,0,0,0,.165,1.836,1.994,1.994,0,0,0,1.581.929" transform="translate(0.017 0.016)"/></g></svg>
+                </p>
+                <!-- Error Text -->
+                <div class="flex items-center gap-2" *ngIf=" contactForm.controls['name'].invalid && (contactForm.controls['name'].touched || contactForm.controls['name'].dirty)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a,.b{fill:none;}.b{stroke:#ef3f4c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><g transform="translate(0)"><path class="a" d="M0,0H24V24H0Z" transform="translate(0)"/><path class="b" d="M12,9v2.011m0,4.022v.01" transform="translate(0 -0.017)"/><path class="b" d="M5,19.088H18.971a1.993,1.993,0,0,0,1.645-.893,2.024,2.024,0,0,0,.191-1.872L13.72,4.006a1.989,1.989,0,0,0-3.494,0L3.14,16.323a2.024,2.024,0,0,0,.165,1.836,1.994,1.994,0,0,0,1.581.929" transform="translate(0.017 0.016)"/></g></svg>
+                    <p class="text-sm text-black">Το όνομα πρέπει να αποτελείτε μόνο από γράμματα και κενά</p>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
