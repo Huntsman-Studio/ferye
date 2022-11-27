@@ -7,6 +7,8 @@ import { FavouritesIconComponent } from './favourites-icon/favourites-icon.compo
 import { MenuIconComponent } from './menu-icon/menu-icon.component';
 import { SearchIconComponent } from './search-icon/search-icon.component';
 import { FeryeLogoDarkComponent } from './ferye-logo-dark/ferye-logo-dark.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
+import { AccountIconComponent } from './account-icon/account-icon.component';
 
 
 
@@ -18,10 +20,12 @@ import { FeryeLogoDarkComponent } from './ferye-logo-dark/ferye-logo-dark.compon
     FavouritesIconComponent,
     MenuIconComponent,
     SearchIconComponent,
-    FeryeLogoDarkComponent
+    FeryeLogoDarkComponent,
+    AccountIconComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    // AppRoutingModule
   ],
   exports: [
     DangerComponent,
@@ -30,7 +34,8 @@ import { FeryeLogoDarkComponent } from './ferye-logo-dark/ferye-logo-dark.compon
     FavouritesIconComponent,
     MenuIconComponent,
     SearchIconComponent,
-    FeryeLogoDarkComponent
+    FeryeLogoDarkComponent,
+    AccountIconComponent
   ]
 })
 export class IconsModule { }
