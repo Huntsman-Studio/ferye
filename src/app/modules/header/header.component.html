@@ -2,8 +2,8 @@
 
     <!-- bg-image -->
     <div
-        [ngClass]="[router.url.includes('contact') ? 'bg-[#E0EBF6]' : 'bg-[#E0F6F3]']" 
-        class="p-6 lg:pt-10 lg:px-16">
+        [ngClass]="[router.url.includes('contact') ? 'bg-[#E0EBF6]' : '', router.url.includes('login') ? 'bg-[#FAFAFA]' : '']" 
+        class="bg-header p-6 lg:pt-10 lg:px-16">
         <!-- bg-shadow -->
         <div class="">
             <!-- items -->
