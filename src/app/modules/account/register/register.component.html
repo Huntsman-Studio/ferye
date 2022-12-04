@@ -1,0 +1,95 @@
+<section class="bg-[#B8E1DC] px-10 ptt-10">
+
+    <div class="w-full">
+
+        <div class="w-full gird justify-items-center">
+            <div class="w-full text-center">
+                <h2 class="text-[#060606] text-[22px] font-bold">Δημιούργησε λογαριασμό</h2>
+                <p class="text-[#060606] text-sm pt-2">Πληκτρολόγησε παρακάτω το email σου</p>
+            </div>
+
+            <!-- form -->
+            <div class="w-full mt-[26px]">
+                <form #f="ngForm" [formGroup]="registerForm" (ngSubmit)="register(registerForm)">
+                    <!-- email -->
+                    <div>
+                        <div class="relative">
+                            <!-- Input -->
+                            <input
+                                type="text"
+                                id="email"
+                                formControlName="email"
+                                [ngClass]="[!registerForm.controls['email'].valid && (registerForm.controls['email'].touched || registerForm.controls['email'].dirty) ? 'border-2 border-[#EF3F4C] focus:border-[#EF3F4C] bg-transparent' : 'bg-[#E8FCFA] border-2 border-transparent focus:border-[#007377]' ]"
+                                class="block rounded-xl px-2.5 pb-2.5 pt-5 w-full text-sm text-[#282828]  appearance-none focus:outline-none focus:ring-0  peer h-16 pl-4 font-bold" placeholder=" "
+                            />
+                            <!-- Label  -->
+                            <label
+                                for="email"
+                                [ngClass]="[!registerForm.controls['email'].valid &&
+                                            (registerForm.controls['email'].touched ||
+                                            registerForm.controls['email'].dirty) ? 'text-amarant peer-focus:text-amarant' : 'text-grey-300 peer-focus:text-pine']"
+                                class="absolute text-sm duration-300 transform -translate-y-4 scale-100 top-6 z-10 origin-[0] left-4  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">
+                                Email
+                            </label>
+                            <!-- Valid value-->
+                            <p
+                                *ngIf="(registerForm.controls['email'].valid)"
+                                class="absolute duration-300 transform -translate-y-4 scale-100 top-10 z-10 origin-[0] right-5"
+                            >
+                                <app-valid-icon></app-valid-icon>
+                            </p>
+                            <!-- !Valid value -->
+                            <p
+                            *ngIf=" registerForm.controls['email'].invalid &&
+                                    (registerForm.controls['email'].touched ||
+                                    registerForm.controls['email'].dirty)"
+                            class="absolute duration-300 transform -translate-y-4 scale-100 top-10 z-10 origin-[0] right-5"
+                            >
+                                <app-danger></app-danger>
+                            </p>
+                        </div>
+
+                        <!-- Error message -->
+                        <div class="flex items-center gap-2 pt-1" *ngIf="registerForm.controls['email'].invalid && (registerForm.controls['email'].touched || registerForm.controls['email'].dirty)">
+                            <app-danger></app-danger>
+                            <p class="text-sm text-black">Το email δεν είναι σωστό</p>
+                        </div>
+                    </div>
+                    
+                    <!-- passwd -->
+                    <div>
+                        <div class="relative">
+                            <input type="{{type}}" formControlName="password" id="password" class="block rounded-xl px-2.5 pb-2.5 pt-5 w-full text-sm text-[#282828] bg-[#E8FCFA]  border-2 border-transparent appearance-none dark:focus:border-[#007377] focus:outline-none focus:ring-0 focus:border-[#007377] peer h-16 pl-4 focus:bg-[#E8FCFA] font-bold" placeholder=" " />
+                            <label for="password" class="absolute text-sm text-[#282828]  duration-300 transform -translate-y-4 scale-100 top-6 z-10 origin-[0] left-4 peer-focus:text-[#007377] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Κωδικός πρόσβασης</label>
+                            <p class="absolute text-sm text-[#282828]  duration-300 transform -translate-y-4 scale-100 top-10 z-10 origin-[0] right-5">
+                                <app-eye-icon *ngIf="type == 'password'" (click)="showHidePasswd()"></app-eye-icon>
+                                <app-eye-hide-icon *ngIf="type == 'text'" (click)="showHidePasswd()"></app-eye-hide-icon>
+                            </p>
+                        </div>
+                        <!-- Password Info -->
+                        <div class="text-left pt-3">
+                            <ul class="list-[square] space-y-3" >
+                            <li class="text-[#060606] text-sm">Θα πρέπει να περιέχει τουλάχιστον 8 χαρακτήρες.</li>
+                            <li class="text-[#060606] text-sm">Τουλάχιστον 1 σύμβολο (πχ. @#).</li>
+                            <li class="text-[#060606] text-sm">Τουλάχιστον ένα κεφαλάιο γράμμα.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- continue -->
+                    <div class="w-full mt-16">
+                        <button type="button" [disabled]="registerForm.controls['email'].invalid" 
+                            class="bg-black w-full h-16 text-[#FAFAFA] font-bold text-sm rounded-full disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed enabled:hover:bg-[#007377] enabled:focus:bg-[#004F4F]">Συνέχεια</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- login -->
+            <div class="mt-11 pb-48 w-full text-center">
+                <p class="text-[#6D6D6D] text-xs font-bold">Έχεις ήδη λογαριασμό στο Ferye; <span class="text-black hover:text-[#007377] cursor-pointer" [routerLink]="['/account/login']">Κάνε σύνδεση</span></p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
