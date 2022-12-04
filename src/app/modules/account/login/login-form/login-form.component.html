@@ -1,1 +1,75 @@
-<p>login-form works!</p>
+<div class="pt-10">
+
+    <form #f="ngForm" [formGroup]="loginForm" (ngSubmit)="doLogin(loginForm)">
+
+        <div class="grid gap-4 w-full">
+            <!-- email -->
+            <div class="relative">
+                <!-- Input -->
+                <input
+                    type="text"
+                    id="email"
+                    formControlName="email"
+                    [ngClass]="[!loginForm.controls['email'].valid && (loginForm.controls['email'].touched || loginForm.controls['email'].dirty) ? 'border-2 border-[#EF3F4C] focus:border-[#EF3F4C] bg-transparent' : 'bg-[#E8E8E8] border-2 border-transparent focus:border-[#007377]' ]"
+                    class="block rounded-xl px-2.5 pb-2.5 pt-5 w-full text-sm text-[#282828]  appearance-none focus:outline-none focus:ring-0  peer h-16 pl-4 font-bold" placeholder=" "
+                />
+                <!-- Label  -->
+                <label
+                    for="email"
+                    [ngClass]="[!loginForm.controls['email'].valid &&
+                                (loginForm.controls['email'].touched ||
+                                loginForm.controls['email'].dirty) ? 'text-amarant peer-focus:text-amarant' : 'text-grey-300 peer-focus:text-pine']"
+                    class="absolute text-sm duration-300 transform -translate-y-4 scale-100 top-6 z-10 origin-[0] left-4  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">
+                    Email
+                </label>
+                <!-- Valid value-->
+                <p
+                    *ngIf="(loginForm.controls['email'].valid)"
+                    class="absolute duration-300 transform -translate-y-4 scale-100 top-10 z-10 origin-[0] right-5"
+                >
+                    <app-valid-icon></app-valid-icon>
+                </p>
+                <!-- !Valid value -->
+                <p
+                *ngIf=" loginForm.controls['email'].invalid &&
+                        (loginForm.controls['email'].touched ||
+                        loginForm.controls['email'].dirty)"
+                class="absolute duration-300 transform -translate-y-4 scale-100 top-10 z-10 origin-[0] right-5"
+                >
+                    <app-danger></app-danger>
+                </p>
+            </div>
+
+
+        </div>
+
+        <!-- Error message -->
+        <div class="flex items-center gap-2 pt-1" *ngIf="loginForm.controls['email'].invalid &&
+                (loginForm.controls['email'].touched ||
+                loginForm.controls['email'].dirty)">
+            <app-danger></app-danger>
+            <p class="text-sm text-black">Το email δεν είναι σωστό</p>
+        </div>
+
+        <!-- reset password -->
+        <p [routerLink]="['/account/forgot-password']" class="text-right text-sm pt-4 pb-1 text-grey-200 font-bold hover:text-pine cursor-pointer">Δεν θυμάμαι τον κωδικό μου</p>
+
+        <!-- password -->
+        <div class="relative">
+            <input type="{{type}}" formControlName="password" id="password" class="block rounded-xl px-2.5 pb-2.5 pt-5 w-full text-sm text-grey-300 bg-Grey-200  border-2 border-transparent appearance-none dark:focus:border-pine focus:outline-none focus:ring-0 focus:border-pine peer h-16 pl-4 focus:bg-white font-bold" placeholder=" " />
+            <label for="password" class="absolute text-sm text-grey-300  duration-300 transform -translate-y-4 scale-100 top-6 z-10 origin-[0] left-4 peer-focus:text-pine peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Κωδικός πρόσβασης</label>
+            <p class="absolute text-sm text-grey-300  duration-300 transform -translate-y-4 scale-100 top-10 z-10 origin-[0] right-5">
+                <app-eye-icon *ngIf="type == 'password'" (click)="showHidePasswd()"></app-eye-icon>
+                <app-eye-hide-icon *ngIf="type == 'text'" (click)="showHidePasswd()"></app-eye-hide-icon>
+            </p>
+        </div>
+
+        <!-- Submit -->
+        <!-- <div class="w-full pl-5 pr-5"> -->
+            <div class="flex justify-center items-center pt-14">
+                <button [disabled]="!loginForm.valid" class="bg-black w-80 h-16 text-white font-bold text-lg rounded-[36px] disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed enabled:hover:bg-pine enabled:focus:bg-clover">Σύνδεση</button>
+            </div>
+        <!-- </div> -->
+    </form>
+
+</div>
