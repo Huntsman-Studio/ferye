@@ -9,11 +9,10 @@ import { GlobalDataService } from 'src/app/core/services/global-data.service';
 })
 export class HeaderComponent implements OnInit {
 
-  public element = document.getElementById('');
-
   constructor(public router: Router, private globalDataService: GlobalDataService) { }
 
   ngOnInit(): void {
+
   }
 
   // showMenu
@@ -24,13 +23,13 @@ export class HeaderComponent implements OnInit {
   // set bg Color 
   setElementClass(): string {
     if (this.router.url.includes('login')) {
-      return 'FAFAFA';
+      return 'bg-[#FAFAFA]';
     }
     else if (this.router.url.includes('contact')) {
-      return '#E0EBF6';
+      return 'bg-[#E0EBF6]';
     }
     else {
-      return '#E0F6F3';
+      return 'bg-[#E0F6F3]';
     }
   }
 }
